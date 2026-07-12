@@ -1,0 +1,149 @@
+nav:
+  logo:
+  display_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+
+index_img:
+default_top_img:
+archive_img:
+tag_img:
+category_img:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+
+avatar:
+  img: /images/log-platform-selection/01-infographic-cost-model.png
+  effect: false
+
+social:
+
+favicon: /img/favicon.ico
+
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+highlight_height_limit: false
+code_word_wrap: false
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+wordcount:
+  enable: false
+
+related_post:
+  enable: false
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: 工程、AI 与产品思考
+    button:
+      enable: false
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_webinfo:
+    enable: false
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text:
+  copyright: true
+
+rightside_item_order:
+  enable: false
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+local_search:
+  enable: false
+
+algolia_search:
+  enable: false
+
+translate:
+  enable: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+
+beautify:
+  enable: false
+
+medium_zoom: false
+fancybox: true
+
+canvas_ribbon:
+  enable: false
+
+comments:
+  use:
+
+inject:
+  head:
+  bottom:

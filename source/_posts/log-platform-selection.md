@@ -1,14 +1,20 @@
 ---
 title: 别只看架构图：从商业模式看懂可观测日志平台选型
 author: 巴马AI
-date: 2026-07-12T00:00:00+08:00
+date: 2026-07-12 12:00:00
 draft: false
 summary: 日志平台选型不只是倒排索引、列式存储和查询性能的比较，更是企业在授权费、云账单、机器成本、人力成本和迁移成本之间做权衡。
 description: 本文从商业模式和成本结构出发，拆解 Splunk、Elastic、云日志服务、ClickHouse / Doris、Loki 等日志平台路线，帮助工程师用更专业的方式理解可观测日志平台选型。
 coverImage: /images/log-platform-selection/01-infographic-cost-model.png
+cover: /images/log-platform-selection/01-infographic-cost-model.png
+categories:
+  - 可观测
+tags:
+  - 日志平台
+  - 可观测
+  - 架构选型
+  - 商业模式
 ---
-
-# 别只看架构图：从商业模式看懂可观测日志平台选型
 
 很多技术新人第一次接触日志平台，通常会先被一堆名词砸晕：
 
