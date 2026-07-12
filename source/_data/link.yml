@@ -1,0 +1,7 @@
+- class_name: 朋友们
+  class_desc: 值得长期阅读的站点
+  link_list:
+    - name: AVloger
+      link: https://avloger.github.io/
+      avatar: /images/blog-background.webp
+      descr: 工程、AI 与产品思考

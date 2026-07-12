@@ -6,6 +6,9 @@ nav:
 menu:
   首页: / || fas fa-home
   归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  友链: /link/ || fas fa-link
 
 index_img: /images/blog-background.webp
 default_top_img: /images/blog-background.webp
