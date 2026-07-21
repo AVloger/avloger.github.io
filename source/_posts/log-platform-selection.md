@@ -8,7 +8,7 @@ description: 本文从商业模式和成本结构出发，拆解 Splunk、Elasti
 coverImage: /images/log-platform-selection/01-infographic-cost-model.png
 cover: /images/log-platform-selection/01-infographic-cost-model.png
 categories:
-  - 可观测
+  - 技术分享
 tags:
   - 日志平台
   - 可观测
