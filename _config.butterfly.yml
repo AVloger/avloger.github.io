@@ -5,11 +5,9 @@ nav:
 
 menu:
   首页: / || fas fa-home
+  写作: /writing/ || fas fa-pen
   项目: /projects/ || fas fa-briefcase
-  归档: /archives/ || fas fa-archive
-  分类: /categories/ || fas fa-folder-open
-  标签: /tags/ || fas fa-tags
-  友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-user
 
 index_img: /images/blog-background.webp
 default_top_img: /images/blog-background.webp
@@ -26,7 +24,7 @@ cover:
   default_cover:
 
 avatar:
-  img: /images/log-platform-selection/01-infographic-cost-model.png
+  img: /images/character/04-camera.png
   effect: false
 
 social:
@@ -76,30 +74,30 @@ aside:
   position: right
   card_author:
     enable: true
-    description: 工程、AI 与产品思考
+    description: 从数据中还原世界的真相
     button:
       enable: false
   card_announcement:
     enable: false
   card_recent_post:
-    enable: true
+    enable: false
     limit: 5
     sort: date
     sort_order:
   card_categories:
-    enable: true
+    enable: false
     limit: 8
     expand: none
     sort_order:
   card_tags:
-    enable: true
+    enable: false
     limit: 40
     color: false
     orderby: random
     order: 1
     sort_order:
   card_archives:
-    enable: true
+    enable: false
     type: monthly
     format: MMMM YYYY
     order: -1
@@ -151,4 +149,6 @@ comments:
 
 inject:
   head:
+    - <link rel="stylesheet" href="/css/site.css">
   bottom:
+    - <script src="/js/site.js"></script>

@@ -1,6 +1,6 @@
 ---
 title: 别只看架构图：从商业模式看懂可观测日志平台选型
-author: AVloger
+author: 巴马AI
 date: 2026-07-12 12:00:00
 draft: false
 summary: 日志平台选型不只是倒排索引、列式存储和查询性能的比较，更是企业在授权费、云账单、机器成本、人力成本和迁移成本之间做权衡。
@@ -8,12 +8,13 @@ description: 本文从商业模式和成本结构出发，拆解 Splunk、Elasti
 coverImage: /images/log-platform-selection/01-infographic-cost-model.png
 cover: /images/log-platform-selection/01-infographic-cost-model.png
 categories:
-  - 技术分享
+  - 公众号
 tags:
   - 日志平台
   - 可观测
   - 架构选型
   - 商业模式
+channel: wechat
 ---
 
 很多技术新人第一次接触日志平台，通常会先被一堆名词砸晕：
@@ -307,3 +308,9 @@ Loki：用查询模型约束换低索引成本
 - [ClickHouse 官方介绍](https://clickhouse.com/)
 - [Apache Doris 官方介绍](https://doris.apache.org/docs/4.x/getting-started/what-is-apache-doris/)
 - [Grafana Loki 官方文档](https://grafana.com/docs/loki/latest/)
+
+<div class="wechat-follow">
+  <p>原文首发微信公众号「巴马AI」。</p>
+  <p>微信搜索「巴马AI」<button class="hub-copy" type="button" data-copy-wechat>复制名称</button></p>
+  <img src="/images/wechat-qr.jpg" alt="关注公众号巴马AI">
+</div>

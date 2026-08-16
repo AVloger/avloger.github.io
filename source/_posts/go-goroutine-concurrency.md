@@ -8,7 +8,7 @@ description: 本文从 goroutine 的设计动机、goroutine 与 OS thread 的�
 coverImage: /images/go-concurrency/go-logo-blue.svg
 cover: /images/go-concurrency/go-logo-blue.svg
 categories:
-  - 八股
+  - 技术笔记
 tags:
   - Goroutine
   - Go 并发

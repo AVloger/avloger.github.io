@@ -8,7 +8,7 @@ description: 本文系统梳理虚拟内存、虚拟地址空间、MMU、页表�
 coverImage: /images/virtual-memory/virtual-address-space.svg
 cover: /images/virtual-memory/virtual-address-space.svg
 categories:
-  - 八股
+  - 技术笔记
 tags:
   - 虚拟内存
   - 页表
