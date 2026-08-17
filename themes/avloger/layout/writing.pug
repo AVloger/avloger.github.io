@@ -1,0 +1,52 @@
+include partial/follow
+
+-
+  const wechat = cat_posts("公众号")
+  const notes = cat_posts("技术笔记")
+  const featured = wechat[0]
+  const rest = group_posts_by_month(wechat.slice(1))
+
+section.page-intro
+  h1 写作
+  p 公众号追随正在发生的变化。技术笔记保留那些值得反复回看的问题与方法。
+
+if featured
+  section.writing-feature
+    h2 巴马AI
+    .writing-feature-grid
+      a.feature-story(href=url_for(featured.path))
+        if post_cover(featured)
+          img(src=url_for(post_cover(featured)) alt=featured.title)
+        .feature-story-body
+          time(datetime=date(featured.date, "YYYY-MM-DD"))= date(featured.date, "YYYY.MM.DD")
+          h3= featured.title
+          if post_blurb(featured)
+            p= post_blurb(featured)
+      +follow("扫码关注，看正在发生的工程判断。")
+
+if rest.length
+  section.writing-index
+    each group in rest
+      .month-group
+        h3= group.key
+        .title-grid
+          each post in group.posts
+            a.catalog-item(href=url_for(post.path))
+              if post_cover(post)
+                img(src=url_for(post_cover(post)) alt="" loading="lazy")
+              .catalog-copy
+                time(datetime=date(post.date, "YYYY-MM-DD"))= date_short(post.date)
+                span= post.title
+
+if notes.length
+  section.notes-index
+    .section-head
+      h2 技术笔记
+      a.section-link(href=url_for("/archives/")) 全部归档
+    .note-pair
+      each note in notes
+        a.note-item(href=url_for(note.path))
+          time(datetime=date(note.date, "YYYY-MM-DD"))= date_short(note.date)
+          strong= note.title
+          if post_blurb(note)
+            p= post_blurb(note)

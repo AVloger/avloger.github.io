@@ -1,0 +1,18 @@
+section.page-intro
+  h1 文章
+  p
+    a(href=url_for("/writing/")) 按公众号与技术笔记阅读
+
+ol.post-index
+  each post in page.posts.toArray()
+    li
+      a(href=url_for(post.path))
+        time(datetime=date(post.date, "YYYY-MM-DD"))= date(post.date, "YYYY.MM.DD")
+        span= post.title
+
+if page.total > 1
+  nav.pager(aria-label="分页")
+    if page.prev
+      a(href=url_for(page.prev_link)) 较新
+    if page.next
+      a(href=url_for(page.next_link)) 更早

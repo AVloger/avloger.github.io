@@ -1,0 +1,39 @@
+if page.type === "tags"
+  section.page-intro
+    h1 标签
+  ul.chip-index
+    each tag in site.tags.sort("name").toArray()
+      li
+        a(href=url_for(tag.path))
+          span= tag.name
+          time= tag.length
+else if page.type === "categories"
+  section.page-intro
+    h1 分类
+  ul.chip-index
+    each cat in site.categories.sort("name").toArray()
+      li
+        a(href=url_for(cat.path))
+          span= cat.name
+          time= cat.length
+else if page.type === "link"
+  section.page-intro
+    h1= page.title
+    != page.content
+  each group in site.data.link || []
+    section.link-group
+      h2= group.class_name
+      if group.class_desc
+        p= group.class_desc
+      ul.link-list
+        each item in group.link_list || []
+          li
+            a(href=item.link target="_blank" rel="noopener")= item.name
+            if item.descr
+              span= item.descr
+else
+  article.post
+    header.post-header
+      h1= page.title
+    .article
+      != page.content

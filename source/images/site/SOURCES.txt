@@ -1,0 +1,18 @@
+earth-night.jpg
+  Completed from NASA Black Marble (partial source) with wan2.7-image-pro
+  Original data: NASA Earth Observatory / NOAA Suomi NPP, 2012
+
+earth-globe.jpg
+  Unsplash photo-1451187580459-43490279c0fa
+  Earth at night from orbit
+  Unsplash License
+
+datacenter-aisle.jpg
+  Unsplash photo-1558494949-ef010cbdcc31
+  Taylor Vick, data center racks
+  Unsplash License
+
+network-cables.jpg
+  Pexels 1148820
+  Server storage array and cabling
+  Pexels License

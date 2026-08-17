@@ -67,7 +67,7 @@ updated_option: mtime
 per_page: 10
 pagination_dir: page
 
-theme: butterfly
+theme: avloger
 
 deploy:
   type: ""

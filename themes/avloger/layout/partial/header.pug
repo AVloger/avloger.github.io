@@ -1,0 +1,15 @@
+header.site-header
+  .shell.header-inner
+    a.wordmark(href=url_for("/"))
+      img.brand-mark(src=url_for(theme.avatar) alt="" width="64" height="64")
+      span= config.title
+    nav.nav-desktop(aria-label="主导航")
+      each href, name in theme.menu
+        a(href=url_for(href) class={ "is-active": nav_active(href) })= name
+    .header-tools
+      button.theme-toggle(type="button" data-theme-toggle aria-pressed="true") 浅色
+      details.nav-mobile
+        summary 菜单
+        nav(aria-label="移动导航")
+          each href, name in theme.menu
+            a(href=url_for(href) class={ "is-active": nav_active(href) })= name

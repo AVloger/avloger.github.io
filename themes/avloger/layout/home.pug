@@ -1,0 +1,64 @@
+-
+  const wechat = cat_posts("公众号")
+  const notes = cat_posts("技术笔记")
+  const featured = wechat[0]
+  const projects = ((site.data.projects && site.data.projects.items) || []).slice(0, 2)
+  const counts = site_counts()
+
+section.hero
+  .shell.hero-copy
+    h1.hero-title 从数据中还原世界的真相
+    p.hero-lead 工程、AI 与产品思考。把系统信号写成可以复查的判断。
+    p.hero-actions
+      a.btn(href=url_for("/projects/")) 探索项目
+      a.btn-text(href=url_for("/writing/")) 阅读文章
+  figure.hero-figure
+    img(
+      src=url_for("/images/site/earth-night.jpg")
+      alt="卫星合成的地球夜间灯光"
+      width="2400"
+      height="1200"
+      fetchpriority="high"
+    )
+
+section.corpus
+  p.corpus-line
+    span 公众号 #{counts.wechat}
+    span 技术笔记 #{counts.notes}
+    span 项目 #{counts.projects}
+
+section.home-projects
+  .section-head
+    h2 项目
+    a.section-link(href=url_for("/projects/")) 查看全部
+  .project-index
+    each project, index in projects
+      a.project-row(href=url_for("/projects/") class={ "is-lead": index === 0 })
+        if project.image
+          img(src=url_for(project.image) alt=project.image_alt || project.title loading="lazy")
+        .project-row-copy
+          span.project-row-kicker= project.kicker
+          strong.project-row-title= project.title
+          span.project-row-home= project.home
+
+if featured
+  section.home-writing
+    .section-head
+      h2 文章
+      a.section-link(href=url_for("/writing/")) 进入写作页
+    a.feature-story(href=url_for(featured.path))
+      if post_cover(featured)
+        img(src=url_for(post_cover(featured)) alt=featured.title loading="lazy")
+      .feature-story-body
+        time(datetime=date(featured.date, "YYYY-MM-DD"))= date(featured.date, "YYYY.MM.DD")
+        h3= featured.title
+        if post_blurb(featured)
+          p= post_blurb(featured)
+    if notes.length
+      .note-pair
+        each note in notes.slice(0, 2)
+          a.note-item(href=url_for(note.path))
+            time(datetime=date(note.date, "YYYY-MM-DD"))= date_short(note.date)
+            strong= note.title
+            if post_blurb(note)
+              p= post_blurb(note)

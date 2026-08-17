@@ -1,0 +1,20 @@
+article.post
+  header.post-header
+    h1= page.title
+    p.post-meta
+      time(datetime=date(page.date, "YYYY-MM-DD"))= date(page.date, "YYYY.MM.DD")
+      if page.categories && page.categories.length
+        each cat in page.categories.toArray()
+          a(href=url_for(cat.path))= cat.name
+      if page.author
+        span= page.author
+  if post_cover(page)
+    img.post-cover(src=url_for(post_cover(page)) alt=page.title)
+  -
+    const tocHtml = toc(page.content, { list_number: false, max_depth: 3 })
+  if tocHtml
+    details.toc
+      summary 目录
+      != tocHtml
+  .article
+    != page.content

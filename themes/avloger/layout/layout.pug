@@ -1,0 +1,33 @@
+doctype html
+html(lang=config.language || "zh-CN" data-theme="dark")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= page_title()
+    meta(name="description" content=page.description || config.description)
+    meta(name="author" content=page.author || config.author)
+    meta(property="og:type" content=is_post() ? "article" : "website")
+    meta(property="og:title" content=page_title())
+    meta(property="og:description" content=page.description || config.description)
+    meta(property="og:url" content=page.permalink)
+    meta(property="og:image" content=og_image())
+    meta(property="og:site_name" content=config.title)
+    meta(name="theme-color" content="#0b1218")
+    link(rel="canonical" href=page.permalink)
+    link(rel="stylesheet" href=url_for("css/site.css"))
+    script.
+      (function () {
+        try {
+          var key = "avloger-theme";
+          var saved = localStorage.getItem(key);
+          var theme = saved || "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {}
+      })();
+  body
+    a.skip-link(href="#main") 跳到正文
+    include partial/header
+    main#main.site-main
+      != body
+    include partial/footer
+    script(src=url_for("js/site.js") defer)

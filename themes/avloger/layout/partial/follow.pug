@@ -1,0 +1,9 @@
+mixin follow(caption)
+  aside.follow
+    p.follow-name 微信公众号 #{theme.wechat_name}
+    p.follow-search
+      | #{theme.wechat_search}
+      button.copy-btn(type="button" data-copy-wechat="true") 复制名称
+    img(src=url_for(theme.wechat_qr) alt=`关注公众号${theme.wechat_name}` width="430" height="430")
+    if caption
+      p.follow-caption= caption

@@ -1,0 +1,40 @@
+items:
+  - kicker: 日志服务 · AI Copilot
+    title: SLS SQL/SPL Copilot
+    summary: 面向日志服务 SLS 查询与分析场景的智能辅助能力，目标是降低用户从自然语言意图到可执行 SQL/SPL 查询的门槛。
+    detail: 这个项目的核心价值在于把日志分析里的语法理解、字段理解、查询构造、结果解释串成更顺滑的工作流。对用户来说，它不是简单生成一段查询语句，而是帮助用户更快完成排障、检索、聚合分析和探索式查询。
+    points:
+      - 理解 SLS 场景下的日志字段、索引配置和查询约束。
+      - 在 SQL 与 SPL 两种表达体系之间处理用户意图。
+      - 让 AI 生成结果更接近可执行、可解释、可迭代的工程输出。
+      - 把 Copilot 能力嵌入真实控制台工作流，而不是停留在 demo。
+    video:
+      type: iframe
+      src: https://player.bilibili.com/player.html?bvid=BV1JiVyzCEmq&autoplay=0
+    home: 把自然语言意图变成可执行、可解释、可迭代的查询。
+    image: /images/site/datacenter-aisle.jpg
+    image_alt: 数据中心机柜与指示灯
+
+  - kicker: 日志服务 · 数据加工
+    title: 新版数据加工
+    summary: 新版数据加工是面向日志清洗、转换、富化和分发的处理能力升级，目标是让用户以更低的学习成本完成稳定、可观测、可维护的数据处理链路。
+    detail: 它解决的是日志进入存储和分析系统之前的关键问题：原始数据往往格式不统一、字段不规范、上下文缺失，直接查询和分析成本很高。通过新版数据加工，用户可以对日志进行解析、字段提取、条件分支、数据清洗、投递转换等处理，让下游检索、分析、告警和报表更可靠。
+    points:
+      - 把复杂的数据处理能力设计成更容易理解和调试的产品体验。
+      - 兼顾实时处理性能、规则表达能力和稳定性。
+      - 服务不同规模用户，从简单字段清洗到复杂加工链路。
+      - 让加工过程具备更好的可观测性，方便定位规则和数据问题。
+    video:
+      type: video
+      src: https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20240627/aoptgz/%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%BC%94%E7%A4%BA.mp4
+    home: 在分析之前完成清洗、转换和富化，让下游查询更稳。
+    image: /images/site/network-cables.jpg
+    image_alt: 存储阵列与网络线缆
+
+refs:
+  - title: SLS SQL/SPL Copilot 演示视频
+    url: https://www.bilibili.com/video/BV1JiVyzCEmq/
+  - title: 新版数据加工官网演示视频
+    url: https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20240627/aoptgz/%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%BC%94%E7%A4%BA.mp4
+  - title: 新版数据加工官方文档
+    url: https://help.aliyun.com/zh/sls/data-processing-new-edition-overview

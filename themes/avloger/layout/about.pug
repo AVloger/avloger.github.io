@@ -1,0 +1,27 @@
+include partial/follow
+
+figure.about-visual
+  img(
+    src=url_for("/images/site/earth-globe.jpg")
+    alt="轨道上看到的地球夜间城市灯光"
+    width="1600"
+    height="1065"
+    loading="lazy"
+  )
+
+section.page-intro.about-intro
+  h1 关于
+  p.about-slogan 从数据中还原世界的真相。
+  p 我做数据和可观测相关的工程，关心系统如何从原始信号里还原出可执行的判断。项目里验证过的东西，会写进公众号巴马AI；操作系统、语言运行时这类会反复打开的材料，留在技术笔记里。
+
+section.about-now
+  h2 在做什么
+  p
+    a(href=url_for("/projects/")) SLS 查询与数据加工
+    | ：把日志分析里的意图、字段、查询和结果解释串成可落地的产品能力。
+  p
+    a(href=url_for("/writing/")) 巴马AI 与技术笔记
+    | ：写可观测、数据系统和 Agent 工程里那些值得留下来的判断。
+
+section.about-follow
+  +follow("公众号写正在发生的变化。这里是可以反复回看的版本。")

@@ -1,0 +1,42 @@
+-
+  const data = site.data.projects || {}
+  const projects = data.items || []
+  const refs = data.refs || []
+
+section.page-intro
+  h1 项目
+  p 这里记录一些我参与过、愿意公开展示的工程项目。重点不只是功能本身，也包括背后的产品判断、工程复杂度和落地场景。
+
+each project, index in projects
+  article.project-block(class={ "is-lead": index === 0 })
+    p.project-kicker= project.kicker
+    h2= project.title
+    if project.image
+      img.project-photo(src=url_for(project.image) alt=project.image_alt || project.title loading="lazy")
+    p= project.summary
+    p= project.detail
+    if project.points && project.points.length
+      ul
+        each point in project.points
+          li= point
+    if project.video
+      .video-frame
+        if project.video.type === "iframe"
+          iframe(
+            src=project.video.src
+            title=project.title
+            loading="lazy"
+            allowfullscreen
+          )
+        else
+          video(controls preload="metadata")
+            source(src=project.video.src type="video/mp4")
+            | 当前浏览器不支持内嵌视频播放。
+
+if refs.length
+  section.project-refs
+    h2 参考链接
+    ul
+      each ref in refs
+        li
+          a(href=ref.url target="_blank" rel="noopener")= ref.title
