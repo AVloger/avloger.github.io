@@ -9,6 +9,7 @@ coverImage: /images/virtual-memory/virtual-address-space.svg
 cover: /images/virtual-memory/virtual-address-space.svg
 categories:
   - 技术笔记
+  - 内存
 tags:
   - 虚拟内存
   - 页表

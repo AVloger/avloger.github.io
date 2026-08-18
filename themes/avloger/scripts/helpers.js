@@ -79,11 +79,32 @@ hexo.extend.helper.register("og_image", function () {
   return this.full_url_for(cover);
 });
 
+hexo.extend.helper.register("note_groups", function () {
+  const names = ["操作系统", "MySQL", "Redis", "内存", "大数据"];
+  const grouped = new Set();
+  const groups = names
+    .map((name) => {
+      const posts = this.cat_posts(name);
+      posts.forEach((post) => grouped.add(post._id));
+      return { name, posts };
+    })
+    .filter((group) => group.posts.length);
+  const leftover = this.cat_posts("技术笔记").filter((post) => !grouped.has(post._id));
+  if (leftover.length) {
+    groups.push({ name: "其他", posts: leftover });
+  }
+  return groups;
+});
+
 hexo.extend.helper.register("site_counts", function () {
   const projects = (this.site.data.projects && this.site.data.projects.items) || [];
+  const noteIds = new Set();
+  ["技术笔记", "操作系统", "MySQL", "Redis", "内存", "大数据"].forEach((name) => {
+    this.cat_posts(name).forEach((post) => noteIds.add(post._id));
+  });
   return {
     wechat: this.cat_posts("公众号").length,
-    notes: this.cat_posts("技术笔记").length,
+    notes: noteIds.size,
     projects: projects.length,
   };
 });

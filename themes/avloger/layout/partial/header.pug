@@ -7,9 +7,13 @@ header.site-header
       each href, name in theme.menu
         a(href=url_for(href) class={ "is-active": nav_active(href) })= name
     .header-tools
+      if theme.github
+        a.github-link(href=theme.github target="_blank" rel="noopener") GitHub
       button.theme-toggle(type="button" data-theme-toggle aria-pressed="true") 浅色
       details.nav-mobile
         summary 菜单
         nav(aria-label="移动导航")
           each href, name in theme.menu
             a(href=url_for(href) class={ "is-active": nav_active(href) })= name
+          if theme.github
+            a(href=theme.github target="_blank" rel="noopener") GitHub

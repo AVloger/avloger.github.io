@@ -2,3 +2,5 @@ footer.site-footer
   .shell.footer-inner
     p #{config.title}
     p= config.subtitle
+    if theme.github
+      a(href=theme.github target="_blank" rel="noopener") GitHub
